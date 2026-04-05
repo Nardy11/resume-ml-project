@@ -223,6 +223,8 @@ http://localhost:8000/docs
 ### 📌 Sample API Response
 <img width="1282" height="878" alt="image" src="https://github.com/user-attachments/assets/b180df37-55f0-4f08-a9ed-be2a6579047e" />
 
+### 📌 Docker Running Container
+<img width="1734" height="729" alt="image" src="https://github.com/user-attachments/assets/1e4d9b97-5a9d-43a8-8b6b-7e50cfc1d1fc" />
 
 ---
 
