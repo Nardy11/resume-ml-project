@@ -92,3 +92,175 @@ Through this project and the course, I applied and strengthened the following sk
   },
   "explanation": "Skills match well, but overall alignment can be improved."
 }
+```
+
+---
+
+## 🏗️ Project Structure
+
+```
+app/
+  main.py
+  model.py
+  ingestion.py
+  preprocessing.py
+  logger.py
+
+tests/
+  test_api.py
+  test_model.py
+  test_logging.py
+  sample_cv.pdf
+
+logs/
+  app.log
+
+run_tests.sh
+Dockerfile
+requirements.txt
+README.md
+```
+
+---
+
+## 🧪 Testing
+
+### ▶ Run all tests (Linux / Mac)
+
+```
+./run_tests.sh
+```
+
+### ▶ Run all tests (Windows)
+
+```
+python -m pytest
+```
+
+> ⚠️ We use `python -m pytest` instead of `pytest` to avoid import/path issues.
+
+---
+
+## ✅ What is Tested
+
+- API endpoint (`/analyze`)  
+- Model outputs (SBERT, TF-IDF, advanced score)  
+- Logging system  
+- Full pipeline integration  
+
+---
+
+## 📄 Sample Testing Files
+
+Included for easy testing:
+
+- ✅ `tests/sample_cv.pdf`  
+- ✅ predefined job descriptions  
+
+---
+
+## 🧪 Example Test Scenarios
+
+### 🟢 Strong Match (~70–80%)
+Machine learning engineer with experience in Python, TensorFlow, deep learning, and computer vision.
+
+### 🟡 Moderate Match (~50–65%)
+Software engineer with knowledge of APIs, databases, and some machine learning concepts.
+
+### 🔴 Low Match (<40%)
+Frontend developer with experience in HTML, CSS, JavaScript, and UI design.
+
+---
+
+## ⚙️ Installation & Running
+
+### 1️⃣ Install dependencies
+```
+pip install -r requirements.txt
+```
+
+### 2️⃣ Run tests
+```
+python -m pytest
+```
+
+### 3️⃣ Run API
+```
+uvicorn app.main:app --reload
+```
+
+### 4️⃣ Open Swagger UI
+```
+http://127.0.0.1:8000/docs
+```
+
+---
+
+## 🐳 Docker Usage
+
+### 🔧 Build image
+```
+docker build -t resume_ml_project .
+```
+
+### ▶ Run container
+```
+docker run -p 8000:8000 resume-analyzer
+```
+
+### 🌐 Access API
+```
+http://localhost:8000/docs
+```
+
+---
+
+## 📸 Screenshots
+
+### 📌 Swagger UI
+<img width="1600" height="848" alt="image" src="https://github.com/user-attachments/assets/e4611805-3e22-4e4e-aa0c-1352e942ccc0" />
+
+### 📌 Sample API Response
+<img width="1282" height="878" alt="image" src="https://github.com/user-attachments/assets/b180df37-55f0-4f08-a9ed-be2a6579047e" />
+
+
+---
+
+## ✨ Key Features
+
+- 🧠 Semantic understanding (SBERT)  
+- 🔍 Keyword matching (TF-IDF)  
+- 📊 Skill gap detection  
+- 💡 Explainable results  
+- ⚖️ Bias detection  
+- 🧪 Fully tested (pytest)  
+- 🐳 Dockerized  
+- ⚡ FastAPI-based API  
+
+---
+
+## ⚠️ Limitations
+
+- Skill detection depends on predefined skill list  
+- Semantic similarity is approximate  
+- Not fine-tuned for specific domains  
+
+---
+
+## 🚀 Future Improvements
+
+- ✍️ CV rewriting suggestions  
+- 🖥️ UI dashboard  
+- 📚 Improved skill ontology  
+- ⚖️ Advanced bias detection  
+
+---
+
+## 👨‍💻 Author
+
+Developed as part of an AI/ML learning journey focusing on:
+
+- Machine Learning Engineering  
+- NLP Systems  
+- Backend API Development  
+- MLOps Fundamentals  
