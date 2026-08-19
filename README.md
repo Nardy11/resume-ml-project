@@ -1,6 +1,7 @@
 # 🚀 AI Resume Analyzer – NLP-Based CV Matching System
 
 [![CI](https://github.com/Nardy11/resume-ml-project/actions/workflows/ci.yml/badge.svg)](https://github.com/Nardy11/resume-ml-project/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 ## 🧠 Overview
 
@@ -292,3 +293,7 @@ Developed as part of an AI/ML learning journey focusing on:
 - NLP Systems  
 - Backend API Development  
 - MLOps Fundamentals  
+
+## License
+
+MIT — see [LICENSE](./LICENSE).
