@@ -1,5 +1,7 @@
 # 🚀 AI Resume Analyzer – NLP-Based CV Matching System
 
+[![CI](https://github.com/Nardy11/resume-ml-project/actions/workflows/ci.yml/badge.svg)](https://github.com/Nardy11/resume-ml-project/actions/workflows/ci.yml)
+
 ## 🧠 Overview
 
 This project is an **AI-powered Resume Analyzer API** that evaluates how well a CV matches a given job description using Natural Language Processing (NLP).
@@ -205,7 +207,7 @@ docker build -t resume_ml_project .
 
 ### ▶ Run container
 ```
-docker run -p 8000:8000 resume-analyzer
+docker run -p 8000:8000 resume_ml_project
 ```
 
 ### 🌐 Access API
@@ -214,6 +216,30 @@ http://localhost:8000/docs
 ```
 
 ---
+
+## 🔌 API Overview
+
+| Method | Endpoint | Inputs | Purpose |
+|---|---|---|---|
+| POST | `/analyze` | `cv` PDF + `job_description` text | Returns similarity scores, matched/missing skills, bias indicators, and an explanation |
+
+### Architecture
+
+```mermaid
+flowchart LR
+    Client[Client] --> API[FastAPI /analyze]
+    API --> Ingestion[PDF ingestion]
+    API --> Models[SBERT + TF-IDF]
+    API --> Results[Scores + skills + explanation]
+```
+
+### Example Request
+
+```bash
+curl -X POST http://127.0.0.1:8000/analyze \
+  -F "cv=@tests/sample_cv.pdf" \
+  -F "job_description=Python backend engineer with Docker experience"
+```
 
 ## 📸 Screenshots
 
